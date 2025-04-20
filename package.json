@@ -1,0 +1,22 @@
+{
+  "name": "western-uganda-blog",
+  "version": "1.0.0",
+  "description": "A blog about Western Uganda's culture, tourism, and stories",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "debug": "DEBUG=* eleventy"
+  },
+  "keywords": [
+    "blog",
+    "uganda",
+    "western-uganda",
+    "culture",
+    "tourism"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

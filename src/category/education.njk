@@ -1,0 +1,33 @@
+---
+layout: base.njk
+pagination:
+  data: collections.posts
+  size: 10
+  alias: categoryPosts
+  filter:
+    - category
+eleventyComputed:
+  title: "Education"
+  category: "Education"
+---
+
+<section class="hero category-hero">
+    <div class="container">
+        <h1>Education</h1>
+        <p>Explore articles about Education in Western Uganda</p>
+    </div>
+</section>
+
+<section class="category-posts">
+    <div class="container">
+        <div class="posts-grid">
+            <article class="post-card">
+                <div class="post-card-content">
+                    <h2>Education in Western Uganda</h2>
+                    <p>An overview of the education system in Western Uganda, challenges, and opportunities for students.</p>
+                    <a href="/posts/education-in-western-uganda/" class="read-more">Read More</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section> 

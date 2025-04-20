@@ -1,0 +1,46 @@
+---
+layout: base.njk
+pagination:
+  data: collections.posts
+  size: 10
+  alias: categoryPosts
+  filter:
+    - tag
+    - category
+eleventyComputed:
+  title: "{{ category }}"
+---
+
+<section class="hero category-hero">
+    <div class="container">
+        <h1>{{ category }}</h1>
+        <p>Explore articles about {{ category }} in Western Uganda</p>
+    </div>
+</section>
+
+<section class="category-posts">
+    <div class="container">
+        {% if categoryPosts.length > 0 %}
+            <div class="posts-grid">
+                {% for post in categoryPosts %}
+                <article class="post-card">
+                    {% if post.data.image %}
+                    <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
+                    {% endif %}
+                    <div class="post-card-content">
+                        <h2>{{ post.data.title }}</h2>
+                        <p>{{ post.data.description }}</p>
+                        <a href="{{ post.url }}" class="read-more">Read More</a>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="no-posts">
+                <h2>No posts found in this category yet</h2>
+                <p>Check back soon for content about {{ category }} in Western Uganda.</p>
+                <a href="/categories" class="read-more">Browse All Categories</a>
+            </div>
+        {% endif %}
+    </div>
+</section> 

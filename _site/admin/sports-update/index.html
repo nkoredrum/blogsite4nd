@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Admin | Western Uganda Blog</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="/" class="logo">
+                    <img src="/assets/images/nkore-drum-logo.png" alt="Nkore Drum Logo" class="logo-image">
+                    <span class="logo-text">Nkore Drum</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="/categories">Categories</a>
+                        <ul class="dropdown-content">
+                            <li><a href="/category/culture">Culture & Traditions</a></li>
+                            <li><a href="/category/tourism">Tourism</a></li>
+                            <li><a href="/category/food">Local Cuisine</a></li>
+                            <li><a href="/category/education">Education</a></li>
+                            <li><a href="/category/sports">Sports</a></li>
+                            <li><a href="/category/health">Health</a></li>
+                            <li><a href="/category/agriculture">Agriculture</a></li>
+                            <li><a href="/category/business">Business</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main">
+        
+<section class="hero admin-hero">
+    <div class="container">
+        <h1>Sports Data Admin</h1>
+        <p>Update sports results, league tables, and upcoming matches</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="admin-layout">
+        <div class="admin-section">
+            <h2>Latest Results</h2>
+            <form id="results-form" class="admin-form">
+                <div class="form-group">
+                    <label for="result-date">Date</label>
+                    <input type="date" id="result-date" name="result-date" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="team1">Team 1</label>
+                        <input type="text" id="team1" name="team1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="score1">Score</label>
+                        <input type="number" id="score1" name="score1" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="score2">Score</label>
+                        <input type="number" id="score2" name="score2" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="team2">Team 2</label>
+                        <input type="text" id="team2" name="team2" required>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Add Result</button>
+                </div>
+            </form>
+            
+            <div class="data-table-container">
+                <h3>Current Results</h3>
+                <table id="results-table" class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Team 1</th>
+                            <th>Score</th>
+                            <th>Team 2</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apr 20, 2024</td>
+                            <td>Tooro United FC</td>
+                            <td>2 - 1</td>
+                            <td>Kigezi Home Boyz</td>
+                            <td>
+                                <button class="btn-edit" data-id="1">Edit</button>
+                                <button class="btn-delete" data-id="1">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Apr 19, 2024</td>
+                            <td>Nyamityobora FC</td>
+                            <td>0 - 0</td>
+                            <td>Mbarara City FC</td>
+                            <td>
+                                <button class="btn-edit" data-id="2">Edit</button>
+                                <button class="btn-delete" data-id="2">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Apr 18, 2024</td>
+                            <td>Kasese United</td>
+                            <td>3 - 2</td>
+                            <td>Fort Portal FC</td>
+                            <td>
+                                <button class="btn-edit" data-id="3">Edit</button>
+                                <button class="btn-delete" data-id="3">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="admin-section">
+            <h2>League Table</h2>
+            <form id="league-form" class="admin-form">
+                <div class="form-group">
+                    <label for="team-name">Team Name</label>
+                    <input type="text" id="team-name" name="team-name" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="played">Played</label>
+                        <input type="number" id="played" name="played" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="won">Won</label>
+                        <input type="number" id="won" name="won" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="drawn">Drawn</label>
+                        <input type="number" id="drawn" name="drawn" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lost">Lost</label>
+                        <input type="number" id="lost" name="lost" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="points">Points</label>
+                        <input type="number" id="points" name="points" min="0" required>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Add Team</button>
+                </div>
+            </form>
+            
+            <div class="data-table-container">
+                <h3>Current League Table</h3>
+                <table id="league-table" class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th>Team</th>
+                            <th>P</th>
+                            <th>W</th>
+                            <th>D</th>
+                            <th>L</th>
+                            <th>Pts</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Tooro United FC</td>
+                            <td>10</td>
+                            <td>7</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>23</td>
+                            <td>
+                                <button class="btn-edit" data-id="1">Edit</button>
+                                <button class="btn-delete" data-id="1">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Kigezi Home Boyz</td>
+                            <td>10</td>
+                            <td>6</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>21</td>
+                            <td>
+                                <button class="btn-edit" data-id="2">Edit</button>
+                                <button class="btn-delete" data-id="2">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Mbarara City FC</td>
+                            <td>10</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>19</td>
+                            <td>
+                                <button class="btn-edit" data-id="3">Edit</button>
+                                <button class="btn-delete" data-id="3">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Nyamityobora FC</td>
+                            <td>10</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>15</td>
+                            <td>
+                                <button class="btn-edit" data-id="4">Edit</button>
+                                <button class="btn-delete" data-id="4">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="admin-section">
+            <h2>Upcoming Matches</h2>
+            <form id="matches-form" class="admin-form">
+                <div class="form-group">
+                    <label for="match-date">Date</label>
+                    <input type="date" id="match-date" name="match-date" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="home-team">Home Team</label>
+                        <input type="text" id="home-team" name="home-team" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="away-team">Away Team</label>
+                        <input type="text" id="away-team" name="away-team" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="venue">Venue</label>
+                    <input type="text" id="venue" name="venue" required>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Add Match</button>
+                </div>
+            </form>
+            
+            <div class="data-table-container">
+                <h3>Current Upcoming Matches</h3>
+                <table id="matches-table" class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Home Team</th>
+                            <th>Away Team</th>
+                            <th>Venue</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apr 25, 2024</td>
+                            <td>Tooro United FC</td>
+                            <td>Mbarara City FC</td>
+                            <td>Buhinga Stadium, Fort Portal</td>
+                            <td>
+                                <button class="btn-edit" data-id="1">Edit</button>
+                                <button class="btn-delete" data-id="1">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Apr 27, 2024</td>
+                            <td>Kigezi Home Boyz</td>
+                            <td>Nyamityobora FC</td>
+                            <td>Kakyeka Stadium, Mbarara</td>
+                            <td>
+                                <button class="btn-edit" data-id="2">Edit</button>
+                                <button class="btn-delete" data-id="2">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="admin-section">
+            <h2>Publish Changes</h2>
+            <p>After making your updates, click the button below to publish the changes to the website.</p>
+            <div class="form-actions">
+                <button id="publish-btn" class="btn-primary">Publish Changes</button>
+            </div>
+            <div id="publish-status" class="publish-status"></div>
+        </div>
+    </div>
+</div> 
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Western Uganda Blog</h3>
+                    <p>Exploring the beauty and culture of Western Uganda</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/categories">Categories</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="/category/culture">Culture & Traditions</a></li>
+                        <li><a href="/category/tourism">Tourism</a></li>
+                        <li><a href="/category/food">Local Cuisine</a></li>
+                        <li><a href="/category/education">Education</a></li>
+                        <li><a href="/category/sports">Sports</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Western Uganda Blog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/assets/js/countdown.js"></script>
+    <script src="/assets/js/admin.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</body>
+</html> 

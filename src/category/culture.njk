@@ -1,0 +1,30 @@
+---
+layout: base.njk
+pagination:
+  data: collections.posts
+  size: 10
+  alias: categoryPosts
+  filter:
+    - tag
+    - category
+eleventyComputed:
+  title: "Culture & Traditions"
+  category: "Culture & Traditions"
+---
+
+<section class="hero category-hero">
+    <div class="container">
+        <h1>Culture & Traditions</h1>
+        <p>Explore articles about Culture & Traditions in Western Uganda</p>
+    </div>
+</section>
+
+<section class="category-posts">
+    <div class="container">
+        <div class="no-posts">
+            <h2>No posts found in this category yet</h2>
+            <p>Check back soon for content about Culture & Traditions in Western Uganda.</p>
+            <a href="/categories" class="read-more">Browse All Categories</a>
+        </div>
+    </div>
+</section> 

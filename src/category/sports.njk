@@ -1,0 +1,193 @@
+---
+layout: base.njk
+pagination:
+  data: collections.posts
+  size: 10
+  alias: categoryPosts
+  filter:
+    - category
+eleventyComputed:
+  title: "Sports"
+  category: "Sports"
+---
+
+<section class="hero category-hero">
+    <div class="container">
+        <h1>Sports</h1>
+        <p>Explore articles about Sports in Western Uganda</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="category-layout">
+        <main class="category-main">
+            <section class="category-posts">
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <div class="post-card-content">
+                            <h2>Sports in Western Uganda</h2>
+                            <p>Discover the vibrant sports culture and facilities in Western Uganda.</p>
+                            <a href="/posts/sports-in-western-uganda/" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+        
+        <aside class="category-sidebar">
+            <div class="sidebar-widget">
+                <h3>Latest Sports Results</h3>
+                <div class="results-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>Score</th>
+                                <th>Team</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tooro United FC</td>
+                                <td>2 - 1</td>
+                                <td>Kigezi Home Boyz</td>
+                                <td>Apr 20, 2024</td>
+                            </tr>
+                            <tr>
+                                <td>Nyamityobora FC</td>
+                                <td>0 - 0</td>
+                                <td>Mbarara City FC</td>
+                                <td>Apr 19, 2024</td>
+                            </tr>
+                            <tr>
+                                <td>Kasese United</td>
+                                <td>3 - 2</td>
+                                <td>Fort Portal FC</td>
+                                <td>Apr 18, 2024</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="sidebar-widget">
+                <h3>League Table</h3>
+                <div class="results-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Team</th>
+                                <th>P</th>
+                                <th>W</th>
+                                <th>D</th>
+                                <th>L</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tooro United FC</td>
+                                <td>10</td>
+                                <td>7</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Kigezi Home Boyz</td>
+                                <td>10</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mbarara City FC</td>
+                                <td>10</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>19</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Nyamityobora FC</td>
+                                <td>10</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="sidebar-widget">
+                <h3>Upcoming Matches</h3>
+                <div class="upcoming-matches">
+                    <div class="match-item">
+                        <div class="match-date">Apr 25, 2024</div>
+                        <div class="match-teams">
+                            <span>Tooro United FC</span>
+                            <span class="vs">vs</span>
+                            <span>Mbarara City FC</span>
+                        </div>
+                        <div class="match-venue">Buhinga Stadium, Fort Portal</div>
+                    </div>
+                    <div class="match-item">
+                        <div class="match-date">Apr 27, 2024</div>
+                        <div class="match-teams">
+                            <span>Kigezi Home Boyz</span>
+                            <span class="vs">vs</span>
+                            <span>Nyamityobora FC</span>
+                        </div>
+                        <div class="match-venue">Kakyeka Stadium, Mbarara</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar-widget">
+                <h3>Music Countdown</h3>
+                <div class="music-countdown">
+                    <div class="countdown-header">
+                        <h4>Top Sports Anthems</h4>
+                        <div class="countdown-timer">Next song in: <span id="countdown">03:45</span></div>
+                    </div>
+                    <div class="current-song">
+                        <div class="song-info">
+                            <div class="song-title">Victory Song</div>
+                            <div class="song-artist">Western Warriors</div>
+                        </div>
+                        <div class="song-controls">
+                            <button class="play-pause">Pause</button>
+                            <div class="volume-control">
+                                <span class="volume-icon">🔊</span>
+                                <input type="range" min="0" max="100" value="80" class="volume-slider">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="playlist">
+                        <div class="playlist-item active">
+                            <span class="song-number">1</span>
+                            <span class="song-name">Victory Song - Western Warriors</span>
+                        </div>
+                        <div class="playlist-item">
+                            <span class="song-number">2</span>
+                            <span class="song-name">Champions Anthem - Fort Portal FC</span>
+                        </div>
+                        <div class="playlist-item">
+                            <span class="song-number">3</span>
+                            <span class="song-name">We Are The Champions - Mbarara United</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div> 

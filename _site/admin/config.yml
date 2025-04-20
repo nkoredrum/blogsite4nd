@@ -1,0 +1,72 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Enable local backend in development
+local_backend: true
+
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+# Enable editorial workflow
+publish_mode: editorial_workflow
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "src/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Category", name: "category", widget: "relation", collection: "categories", value_field: "title", search_fields: ["title"]}
+      - {label: "Summary", name: "summary", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "categories"
+    label: "Categories"
+    folder: "src/categories"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Icon", name: "icon", widget: "string", required: false}
+
+  - name: "sports"
+    label: "Sports Data"
+    folder: "src/data/sports"
+    create: true
+    fields:
+      - label: "Results"
+        name: "results"
+        widget: "list"
+        fields:
+          - {label: "Date", name: "date", widget: "datetime"}
+          - {label: "Home Team", name: "homeTeam", widget: "string"}
+          - {label: "Away Team", name: "awayTeam", widget: "string"}
+          - {label: "Home Score", name: "homeScore", widget: "number"}
+          - {label: "Away Score", name: "awayScore", widget: "number"}
+          - {label: "Venue", name: "venue", widget: "string"}
+
+      - label: "League Table"
+        name: "league"
+        widget: "list"
+        fields:
+          - {label: "Position", name: "position", widget: "number"}
+          - {label: "Team", name: "team", widget: "string"}
+          - {label: "Played", name: "played", widget: "number"}
+          - {label: "Won", name: "won", widget: "number"}
+          - {label: "Drawn", name: "drawn", widget: "number"}
+          - {label: "Lost", name: "lost", widget: "number"}
+          - {label: "Points", name: "points", widget: "number"}
+
+      - label: "Upcoming Matches"
+        name: "matches"
+        widget: "list"
+        fields:
+          - {label: "Date", name: "date", widget: "datetime"}
+          - {label: "Home Team", name: "homeTeam", widget: "string"}
+          - {label: "Away Team", name: "awayTeam", widget: "string"}
+          - {label: "Venue", name: "venue", widget: "string"} 

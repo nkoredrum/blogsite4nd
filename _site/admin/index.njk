@@ -1,0 +1,91 @@
+---
+layout: base.njk
+title: Admin Dashboard
+---
+
+<section class="hero admin-hero">
+    <div class="container">
+        <h1>Nkore Drum Admin</h1>
+        <p>Manage your blog content, sports data, and site settings</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="admin-layout">
+        <div class="admin-section">
+            <h2>Content Management</h2>
+            <div class="admin-grid">
+                <a href="/admin/posts" class="admin-card">
+                    <h3>Blog Posts</h3>
+                    <p>Create, edit, and manage your blog posts</p>
+                </a>
+                <a href="/admin/categories" class="admin-card">
+                    <h3>Categories</h3>
+                    <p>Organize your content with categories</p>
+                </a>
+                <a href="/admin/media" class="admin-card">
+                    <h3>Media Library</h3>
+                    <p>Upload and manage images and files</p>
+                </a>
+            </div>
+        </div>
+        
+        <div class="admin-section">
+            <h2>Sports Management</h2>
+            <div class="admin-grid">
+                <a href="/admin/sports-update" class="admin-card">
+                    <h3>Sports Data</h3>
+                    <p>Update results, league tables, and matches</p>
+                </a>
+                <a href="/admin/teams" class="admin-card">
+                    <h3>Teams</h3>
+                    <p>Manage team information and profiles</p>
+                </a>
+                <a href="/admin/venues" class="admin-card">
+                    <h3>Venues</h3>
+                    <p>Add and update sports venues</p>
+                </a>
+            </div>
+        </div>
+        
+        <div class="admin-section">
+            <h2>Site Settings</h2>
+            <div class="admin-grid">
+                <a href="/admin/settings" class="admin-card">
+                    <h3>General Settings</h3>
+                    <p>Configure site title, description, and more</p>
+                </a>
+                <a href="/admin/navigation" class="admin-card">
+                    <h3>Navigation</h3>
+                    <p>Customize menus and site structure</p>
+                </a>
+                <a href="/admin/users" class="admin-card">
+                    <h3>Users</h3>
+                    <p>Manage admin users and permissions</p>
+                </a>
+            </div>
+        </div>
+        
+        <div class="admin-section">
+            <h2>Quick Stats</h2>
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Published Posts</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">Sports Results</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Upcoming Matches</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

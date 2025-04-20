@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | Western Uganda Blog</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="/" class="logo">
+                    <img src="/assets/images/nkore-drum-logo.png" alt="Nkore Drum Logo" class="logo-image">
+                    <span class="logo-text">Nkore Drum</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="/categories">Categories</a>
+                        <ul class="dropdown-content">
+                            <li><a href="/category/culture">Culture & Traditions</a></li>
+                            <li><a href="/category/tourism">Tourism</a></li>
+                            <li><a href="/category/food">Local Cuisine</a></li>
+                            <li><a href="/category/education">Education</a></li>
+                            <li><a href="/category/sports">Sports</a></li>
+                            <li><a href="/category/health">Health</a></li>
+                            <li><a href="/category/agriculture">Agriculture</a></li>
+                            <li><a href="/category/business">Business</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main">
+        {{ content | safe }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Western Uganda Blog</h3>
+                    <p>Exploring the beauty and culture of Western Uganda</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/categories">Categories</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="/category/culture">Culture & Traditions</a></li>
+                        <li><a href="/category/tourism">Tourism</a></li>
+                        <li><a href="/category/food">Local Cuisine</a></li>
+                        <li><a href="/category/education">Education</a></li>
+                        <li><a href="/category/sports">Sports</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Western Uganda Blog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/assets/js/countdown.js"></script>
+    <script src="/assets/js/admin.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</body>
+</html> 

@@ -1,0 +1,80 @@
+---
+layout: base.njk
+---
+
+<article class="post-single">
+    <header class="post-header">
+        <div class="container">
+            {% if image %}
+            <div class="post-featured-image">
+                <img src="{{ image }}" alt="{{ title }}">
+            </div>
+            {% endif %}
+            <h1>{{ title }}</h1>
+            <div class="post-meta">
+                <span class="post-category">{{ category }}</span>
+                <span class="post-date">{{ date | date("DD MMM YYYY") }}</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="post-layout">
+            <main class="post-content">
+                <div class="post-summary">
+                    {{ summary }}
+                </div>
+                
+                <div class="post-body">
+                    {{ content | safe }}
+                </div>
+
+                <div class="post-footer">
+                    <div class="post-tags">
+                        <span class="tag-label">Category:</span>
+                        <a href="/category/{{ category | lower }}" class="post-tag">{{ category }}</a>
+                    </div>
+                    
+                    <div class="post-share">
+                        <span class="share-label">Share:</span>
+                        <a href="https://twitter.com/intent/tweet?text={{ title | urlencode }}&url={{ page.url | urlencode }}" target="_blank" class="share-link twitter">Twitter</a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | urlencode }}" target="_blank" class="share-link facebook">Facebook</a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | urlencode }}&title={{ title | urlencode }}" target="_blank" class="share-link linkedin">LinkedIn</a>
+                    </div>
+                </div>
+            </main>
+
+            <aside class="post-sidebar">
+                <div class="sidebar-widget">
+                    <h3>Recent Posts</h3>
+                    <ul class="recent-posts">
+                        {% for post in collections.posts | reverse | limit(5) %}
+                            {% if post.url != page.url %}
+                            <li>
+                                <a href="{{ post.url }}">
+                                    <span class="post-title">{{ post.data.title }}</span>
+                                    <span class="post-date">{{ post.date | date("DD MMM YYYY") }}</span>
+                                </a>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>Categories</h3>
+                    <ul class="category-list">
+                        <li><a href="/category/culture">Culture & Traditions</a></li>
+                        <li><a href="/category/tourism">Tourism</a></li>
+                        <li><a href="/category/food">Local Cuisine</a></li>
+                        <li><a href="/category/education">Education</a></li>
+                        <li><a href="/category/sports">Sports</a></li>
+                        <li><a href="/category/health">Health</a></li>
+                        <li><a href="/category/agriculture">Agriculture</a></li>
+                        <li><a href="/category/business">Business</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</article> 

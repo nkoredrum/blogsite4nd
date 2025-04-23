@@ -1,15 +1,32 @@
-# Western Uganda Blog
+# NKORE DRUM
 
-A modern, fast blog site built with 11ty (Eleventy) to showcase content about Western Uganda's culture, tourism, and stories.
+A storytelling platform dedicated to amplifying the voices and narratives of Western Uganda.
+
+## About
+
+NKORE DRUM is a platform focused on documenting the "Rhythms of Growth" across Western Uganda. Our mission is to amplify underrepresented voices, preserve culture and heritage, and engage stakeholders in meaningful conversations for the region's advancement.
 
 ## Features
 
-- Fast and lightweight
-- Responsive design
-- Blog post support with Markdown
-- Category organization
-- Modern UI with clean typography
-- SEO friendly
+- **Culture & Heritage**: Traditional customs, beliefs, art forms, oral histories, festivals, and iconic landmarks
+- **Sports & Analytics**: Coverage of sports events, teams, local athletes, and performance tracking
+- **Business & Innovation**: Spotlighting entrepreneurs, businesses, innovations, and industries
+- **Arts & Entertainment**: Promoting artists, musicians, filmmakers, and creative expression
+- **Socioeconomic Development**: Addressing education, healthcare, infrastructure, and sharing innovative solutions
+
+## Geographic Coverage
+
+- **Ankole Sub-region**: Mbarara, Bushenyi, Ntungamo, Isingiro, Ibanda, Kiruhura, Sheema, Rubirizi, Buhweju, and Mitooma
+- **Kigezi Sub-region**: Kabale, Kisoro, Rukungiri, Kanungu, Rubanda, and Rukiga
+- **Bunyoro Sub-region**: Hoima, Masindi, Buliisa, Kiryandongo, Kakumiro, Kibaale, and Kagadi
+- **Toro Sub-region**: Fort Portal (Kabarole), Kasese, Kyenjojo, Kamwenge, Bundibugyo, and Ntoroko
+
+## Contact
+
+- **Email**: nkoredrum@gmail.com
+- **Phone**: 0740611525
+- **Location**: Mbarara, Western Uganda
+- **Social Media**: @nkoredrum
 
 ## Getting Started
 
